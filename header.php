@@ -20,6 +20,6 @@
 
 </head>
 <body>
-  <div class="wrapper">  
-    <!-- Подключение  модальных окон-->
+  <div class="wrapper">
+    <!-- Подключение  модальных окон--> 
     <? include "modal-win.php";?>
