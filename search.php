@@ -25,7 +25,7 @@ get_header(); ?>
 			?> 
 						<a href="#" class="main-page__bascet d-flex">
 							<p class="main-page__bascet-link">Корзина</p>
-							<span class="main-page__bascet-number">1</span>
+							<span class="main-page__bascet-number bascet_counter">0</span>
 						</a>
 					</div>
 

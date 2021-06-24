@@ -93,7 +93,7 @@
 					</nav>
 				</div>
 
-				<a href="#" class="bascket-icon"><span class="bascket-icon__number bascet_counter">1</span></a>
+				<a href="#" class="bascket-icon"><span class="bascket-icon__number bascet_counter">0</span></a>
 
 				<div class="menu__icon icon-menu">
 					<span></span>

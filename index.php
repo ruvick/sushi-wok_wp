@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/header-section');?>
+<?php get_template_part('template-parts/header-section');?> 
 
 		<main class="page">
 			<div class="container">
@@ -13,7 +13,7 @@
 						<h1>Доставка пиццы и ролов в Ейске</h1>
 						<a href="#" class="main-page__bascet d-flex">
 							<p class="main-page__bascet-link">Корзина</p>
-							<span class="main-page__bascet-number">1</span>
+							<span class="main-page__bascet-number bascet_counter">0</span>
 						</a>
 					</div>
 
