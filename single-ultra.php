@@ -47,39 +47,53 @@ get_header(); ?>
 							<h1>Филадельфия классик</h1>
 
 							<div class="charect-block">
-								<p>8 шт / 290 г</p>
-								<p>Сливочный сыр, лосось</p>
+								<p><?echo carbon_get_post_meta(get_the_ID(),"offer_number"); ?> шт / <?echo carbon_get_post_meta(get_the_ID(),"offer_weight"); ?> г</p>
+								<p><?echo carbon_get_post_meta(get_the_ID(),"prod_descrip"); ?></p>
+								
+								<? $calor = carbon_get_post_meta(get_the_ID(),"offer_calories");	
+									if (!empty($calor)) { ?>
 								<h5>Пищевая ценность 1 порции:</h5>
 
 								<div class="charect-block__string d-flex">
 									<div class="charect-block__string-l">Калории</div>
-									<div class="charect-block__string-r">381 ккал</div>
+									<div class="charect-block__string-r"><? echo $calor; ?> ккал</div>
 								</div>
 
 								<div class="charect-block__string d-flex">
 									<div class="charect-block__string-l">Белки</div>
-									<div class="charect-block__string-r">22 г</div>
+									<div class="charect-block__string-r"><?echo carbon_get_post_meta(get_the_ID(),"offer_protein"); ?> г</div>
 								</div>
 
 								<div class="charect-block__string d-flex">
 									<div class="charect-block__string-l">Углеводы</div>
-									<div class="charect-block__string-r">35 г</div>
+									<div class="charect-block__string-r"><?echo carbon_get_post_meta(get_the_ID(),"offer_fats"); ?> г</div>
 								</div>
 
 								<div class="charect-block__string d-flex">
 									<div class="charect-block__string-l">Жиры</div>
-									<div class="charect-block__string-r">16 г</div>
+									<div class="charect-block__string-r"><?echo carbon_get_post_meta(get_the_ID(),"offer_carbohyd"); ?> г</div>
 								</div>
+								<? } ?>
 							</div>
 
 							<div class="charect-block__choose d-flex">
-								<div class="charect-block__price rub">350</div>
+								<div class="charect-block__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></div>
 								<div class="number d-flex">
 									<span class="plus">+</span>
 									<input type="text" value="1" size="5" />
 									<span class="minus">-</span>
 								</div>
-								<button class="charect-block__btn btn">В корзину</button>
+								<button class="charect-block__btn btn" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
+  								data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
+									data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
+									data-size = ""
+  								data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"
+  								data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
+  								data-name = "<? echo  get_the_title();?>"
+  								data-count = "1"
+  								data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>">
+									В корзину
+								</button>
 							</div>
 
 

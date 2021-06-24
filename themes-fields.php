@@ -93,8 +93,13 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         // ) )->set_width(20),
 
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
-      Field::make('text', 'mod_vendor', 'Артикул')->set_width(50),
+      Field::make('text', 'offer_number', 'Колличество')->set_width(50),
       // Field::make('text', 'offer_benefit', 'Выгода')->set_width(50),
+      Field::make('rich_text', 'prod_descrip', 'Описание товара')->set_width(100),
+      Field::make('text', 'offer_calories', 'Калории')->set_width(50),
+      Field::make('text', 'offer_protein', 'Белки')->set_width(50),
+      Field::make('text', 'offer_fats', 'Жиры')->set_width(50),
+      Field::make('text', 'offer_carbohyd', 'Углеводы')->set_width(50),
       Field::make( 'complex', 'offer_cherecter', "Характеристики товара табы, левая колонка" )
       ->add_fields( array(
         Field::make( 'text', 'tab_name', 'Наименование параметра' )->set_width(50),
@@ -105,7 +110,6 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         Field::make( 'text', 'tab_name-r', 'Наименование параметра' )->set_width(50),
         Field::make( 'text', 'tab_val-r',  'Значение' )->set_width(50),
       ) ),
-      Field::make('rich_text', 'options_text', 'Дополнительные опции')->set_width(100),
       Field::make('rich_text', 'acses_text', 'Аксесуары')->set_width(100),
       
       // Field::make('text', 'offer_old_price', 'Старая цена (Базовая)')->set_width(50),
