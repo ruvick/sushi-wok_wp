@@ -1,5 +1,8 @@
 <div class="prod-card__body d-flex">
-	<span class="prod-card__sale">HIT</span>
+	<? $sticker = carbon_get_post_meta(get_the_ID(),"offer_sticker");
+    	if (!empty($sticker)) {?>
+		<span class="prod-card__sale"><?echo $sticker;?></span>
+		<?}?>
 	<a href="<?echo get_the_permalink(get_the_ID());?>" class="prod-card__link">
 		<img src="<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" alt="<? the_title();?>">
 	</a>
