@@ -5,23 +5,29 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  */
-
+ 
 get_header(); ?>
 
 <?php get_template_part('template-parts/header-section');?>
 
-<main id="primary" class="page site-main"> 
+		<main class="page">
+			<div class="container">
 
-	<section class="content"> 
-		<div class="container">
+      <?php get_template_part('template-parts/sidebar-section');?>
 
-		<?php get_template_part('template-parts/benefit-slider');?>
+				<section class="main-page category">
 
-			<?php
+					<div class="main-page__flex-block d-flex">
+					<?php
 			if ( function_exists('yoast_breadcrumb') ) {
 				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 			}
 			?> 
+						<a href="#" class="main-page__bascet d-flex">
+							<p class="main-page__bascet-link">Корзина</p>
+							<span class="main-page__bascet-number">1</span>
+						</a>
+					</div>
 
 <?
 				// $arg = $wp_query->query;
@@ -91,7 +97,7 @@ get_header(); ?>
 
 			<h1>Результаты поиска</h1>
 
-			<div class="prod-card d-flex">
+			<div class="main-page__promo d-flex">
 
 				<?php
 				while(have_posts()):
@@ -106,6 +112,7 @@ get_header(); ?>
 
 		</div>
 	</section>
+	</div>
 </main>
 
 <?php get_footer();
