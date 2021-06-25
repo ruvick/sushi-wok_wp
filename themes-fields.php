@@ -100,17 +100,18 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       Field::make('text', 'offer_protein', 'Белки')->set_width(50),
       Field::make('text', 'offer_fats', 'Жиры')->set_width(50),
       Field::make('text', 'offer_carbohyd', 'Углеводы')->set_width(50),
-      Field::make( 'complex', 'offer_cherecter', "Характеристики товара табы, левая колонка" )
-      ->add_fields( array(
-        Field::make( 'text', 'tab_name', 'Наименование параметра' )->set_width(50),
-        Field::make( 'text', 'tab_val',  'Значение' )->set_width(50),
-      ) ),
-      Field::make( 'complex', 'offer_cherecter-r', "Характеристики товара табы, правая колонка" )
-      ->add_fields( array(
-        Field::make( 'text', 'tab_name-r', 'Наименование параметра' )->set_width(50),
-        Field::make( 'text', 'tab_val-r',  'Значение' )->set_width(50),
-      ) ),
-      Field::make('rich_text', 'acses_text', 'Аксесуары')->set_width(100),
+
+      // Field::make( 'complex', 'offer_cherecter', "Характеристики товара табы, левая колонка" )
+      // ->add_fields( array(
+      //   Field::make( 'text', 'tab_name', 'Наименование параметра' )->set_width(50),
+      //   Field::make( 'text', 'tab_val',  'Значение' )->set_width(50),
+      // ) ),
+      // Field::make( 'complex', 'offer_cherecter-r', "Характеристики товара табы, правая колонка" )
+      // ->add_fields( array(
+      //   Field::make( 'text', 'tab_name-r', 'Наименование параметра' )->set_width(50),
+      //   Field::make( 'text', 'tab_val-r',  'Значение' )->set_width(50),
+      // ) ),
+      // Field::make('rich_text', 'acses_text', 'Аксесуары')->set_width(100),
       
       // Field::make('text', 'offer_old_price', 'Старая цена (Базовая)')->set_width(50),
       
@@ -130,67 +131,67 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         Field::make('text', 'gal_img_alt', 'alt и title')->set_width(30)        
       ) ),
 
-      Field::make('complex', 'complex_analogs', 'Ближайшие аналоги')
-        ->set_max(4) // Можно будет выбрать только 5 постов
-      ->add_fields(array(
-        Field::make('image', 'img_analogs', 'Фото')
-          ->set_width(33),
-        Field::make('text', 'price_analogs', 'Цена') 
-          ->set_width(33),
-        Field::make('text', 'link_analogs', 'Ссылка на товар') 
-          ->set_width(33),
-    ))
+    //   Field::make('complex', 'complex_analogs', 'Ближайшие аналоги')
+    //     ->set_max(4) // Можно будет выбрать только 5 постов
+    //   ->add_fields(array(
+    //     Field::make('image', 'img_analogs', 'Фото')
+    //       ->set_width(33),
+    //     Field::make('text', 'price_analogs', 'Цена') 
+    //       ->set_width(33),
+    //     Field::make('text', 'link_analogs', 'Ссылка на товар') 
+    //       ->set_width(33),
+    // ))
 
   ));
 
-  Container::make('post_meta', 'single-galery', 'Характеристики записи')
-  ->show_on_template(array('single-galery.php'))
-      ->add_fields(array(   
-      Field::make('text', 'number_img', 'Колличество изображений') 
-        ->set_width(33),
-      Field::make( 'complex', 'galery_prod_complex', "Сопутствующие товары" )
-        ->set_max(2) // Можно будет выбрать только 2 поста
-        ->add_fields( array(
-          Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),
-          Field::make('text', 'galery_prod_title', 'Название товара')->set_width(30),
-          Field::make('text', 'galery_prod_price', 'Стоимость товара')->set_width(50),
-          Field::make('text', 'galery_prod_link', 'Ссылка на товар')->set_width(50)      
-      ) ),
-      Field::make( 'complex', 'galery_works', "Галерея наших работ" )
-      ->add_fields( array(
-        Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),
-        Field::make('text', 'galery_works_img_sku', 'ID для модификации')->set_width(30),
-        Field::make('text', 'galery_works_img_alt', 'alt и title')->set_width(30)        
-      ) ),
-      Field::make( 'complex', 'galery_fabrics', "Галерея тканей" )
-      ->add_fields( array(
-        Field::make('image', 'galery_fabrics_img', 'Изображение' )->set_width(30),
-        Field::make('text', 'galery_fabrics_img_alt', 'alt и title')->set_width(30)        
-      ) ),
+  // Container::make('post_meta', 'single-galery', 'Характеристики записи')
+  // ->show_on_template(array('single-galery.php'))
+  //     ->add_fields(array(   
+  //     Field::make('text', 'number_img', 'Колличество изображений') 
+  //       ->set_width(33),
+  //     Field::make( 'complex', 'galery_prod_complex', "Сопутствующие товары" )
+  //       ->set_max(2) // Можно будет выбрать только 2 поста
+  //       ->add_fields( array(
+  //         Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),
+  //         Field::make('text', 'galery_prod_title', 'Название товара')->set_width(30),
+  //         Field::make('text', 'galery_prod_price', 'Стоимость товара')->set_width(50),
+  //         Field::make('text', 'galery_prod_link', 'Ссылка на товар')->set_width(50)      
+  //     ) ),
+  //     Field::make( 'complex', 'galery_works', "Галерея наших работ" )
+  //     ->add_fields( array(
+  //       Field::make('image', 'galery_works_img', 'Изображение' )->set_width(30),
+  //       Field::make('text', 'galery_works_img_sku', 'ID для модификации')->set_width(30),
+  //       Field::make('text', 'galery_works_img_alt', 'alt и title')->set_width(30)        
+  //     ) ),
+  //     Field::make( 'complex', 'galery_fabrics', "Галерея тканей" )
+  //     ->add_fields( array(
+  //       Field::make('image', 'galery_fabrics_img', 'Изображение' )->set_width(30),
+  //       Field::make('text', 'galery_fabrics_img_alt', 'alt и title')->set_width(30)        
+  //     ) ),
 
-  ));
+  // ));
 
-  Container::make('post_meta', 'page-gallery-tkaney-obivki-sidenii', 'Характеристики записи')
-  ->show_on_template(array('page-gallery-tkaney-obivki-sidenii.php'))
-      ->add_fields(array(   
-      Field::make( 'complex', 'galery_velours', "Велюр" )
-      ->add_fields( array(
-        Field::make('image', 'galery_velours_img', 'Изображение' )->set_width(30),
-        Field::make('text', 'galery_velours_img_alt', 'alt и title')->set_width(30)        
-      ) ),
+  // Container::make('post_meta', 'page-gallery-tkaney-obivki-sidenii', 'Характеристики записи')
+  // ->show_on_template(array('page-gallery-tkaney-obivki-sidenii.php'))
+  //     ->add_fields(array(   
+  //     Field::make( 'complex', 'galery_velours', "Велюр" )
+  //     ->add_fields( array(
+  //       Field::make('image', 'galery_velours_img', 'Изображение' )->set_width(30),
+  //       Field::make('text', 'galery_velours_img_alt', 'alt и title')->set_width(30)        
+  //     ) ),
 
-      Field::make( 'complex', 'galery_eco', "Эко-Кожа" )
-      ->add_fields( array(
-        Field::make('image', 'galery_eco_img', 'Изображение' )->set_width(30),
-        Field::make('text', 'galery_eco_img_alt', 'alt и title')->set_width(30)        
-      ) ),
+  //     Field::make( 'complex', 'galery_eco', "Эко-Кожа" )
+  //     ->add_fields( array(
+  //       Field::make('image', 'galery_eco_img', 'Изображение' )->set_width(30),
+  //       Field::make('text', 'galery_eco_img_alt', 'alt и title')->set_width(30)        
+  //     ) ),
 
-      Field::make( 'complex', 'galery_leather', "Кожа" )
-      ->add_fields( array(
-        Field::make('image', 'galery_leather_img', 'Изображение' )->set_width(30),
-        Field::make('text', 'galery_leather_img_alt', 'alt и title')->set_width(30)        
-      ) ),
+  //     Field::make( 'complex', 'galery_leather', "Кожа" )
+  //     ->add_fields( array(
+  //       Field::make('image', 'galery_leather_img', 'Изображение' )->set_width(30),
+  //       Field::make('text', 'galery_leather_img_alt', 'alt и title')->set_width(30)        
+  //     ) ),
 
-  ));
+  // ));
 
 ?>

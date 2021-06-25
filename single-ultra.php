@@ -32,19 +32,28 @@ get_header(); ?>
 					<div class="main-page__prod-row d-flex">
 
 						<div class="slider main-page__prod-img">
-							<div class="slider__item">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/01.jpg" alt="">
-							</div>
-							<div class="slider__item">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/02.jpg" alt="">
-							</div>
-							<div class="slider__item">
-								<img src="<?php echo get_template_directory_uri();?>/img/slider-product/03.jpg" alt="">
-							</div>
+							<?
+								$pict = carbon_get_the_post_meta('offer_picture');
+								if($pict) {
+									$pictIndex = 0;
+								foreach($pict as $item) {
+							?>
+								<div class="slider__item">
+									<img
+										id = "pict-<? echo empty($item['gal_img_sku'])?$pictIndex:$item['gal_img_sku']; ?>" 
+										alt = "<? echo $item['gal_img_alt']; ?>"
+										title = "<? echo $item['gal_img_alt']; ?>"
+										src = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'full')[0];?>" />
+								</div>
+							<?
+									$pictIndex++;
+									}
+								}
+							?>
 						</div>
 
 						<div class="main-page__prod-charect d-flex">
-							<h1>Филадельфия классик</h1>
+							<h1><? the_title();?></h1>
 
 							<div class="charect-block">
 								<p><?echo carbon_get_post_meta(get_the_ID(),"offer_number"); ?> шт / <?echo carbon_get_post_meta(get_the_ID(),"offer_weight"); ?> г</p>
