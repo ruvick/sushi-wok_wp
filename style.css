@@ -1261,7 +1261,7 @@ body.ie .ibg img {
   -ms-flex-align: center;
   align-items: center;
   padding: 5px 5px 5px 34px;
-  padding: 28px 5px 25px 25px;
+  padding: 28px 25px 25px 25px;
   position: relative; }
   .sidebar__menu-open:last-child {
     margin-bottom: 0; }
@@ -1298,12 +1298,23 @@ body.ie .ibg img {
 
 .sidebar__submenu.active {
   display: block;
-  margin-top: 25px;
-  padding: 0;
+  /* margin-top: 25px; */
+  padding-top: 35px;
+  padding-bottom: 15px;
+  /* padding: 0; */
   min-height: 15px; }
+  .sidebar__submenu.active li:last-child {
+    border-bottom: 0.5px solid #D2D1D1;
+  }
   .sidebar__submenu.active li {
-    margin-bottom: 5px;
-    margin-left: 10px; }
+    /* margin-bottom: 5px; */
+    margin-left: 0; 
+    border-top: 0.5px solid #D2D1D1;
+  }
+  .sidebar__submenu.active li a {
+    display: block;
+    padding: 10px 0;
+  }
     .sidebar__submenu.active li:last-child {
       margin-bottom: 0; }
     .sidebar__submenu.active li:after {
