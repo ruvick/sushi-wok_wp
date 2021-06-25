@@ -966,7 +966,7 @@ body.ie .ibg img {
     background: #fff;
     border-radius: 23px; }
 
-.menu__link-promo {
+  .menu a:hover {
   color: #fff;
   background: #91B508 !important; }
 

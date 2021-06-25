@@ -24,7 +24,7 @@
 
 				<div class="header__menu menu">
 					<nav class="menu__body">
-						<ul class="menu__list sibling-fade d-flex">
+						<ul class="menu__list d-flex">
 							<li><a href="#" class="menu__link menu__link-promo">Акции</a></li>
 							<li><a href="#" class="menu__link">О нас</a></li>
 							<li><a href="#" class="menu__link">Оплата и доставка</a></li>
