@@ -4,7 +4,7 @@
 		<div class="header__row d-flex">
 
 			<div class="logo-block d-flex">
-				<a href="#" class="header__logo logo-icon"></a>
+				<a href="http://dostavka-eisk.ru" class="header__logo logo-icon"></a>
 
 				<div class="logo-block__contact d-flex">
 					<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a>

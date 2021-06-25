@@ -17,8 +17,11 @@ get_header(); ?>
   <section class="main-page category">
 
 					<div class="main-page__flex-block d-flex">
-						<p id="breadcrumbs"><span><span><a href="#">Главная</a> / <span class="breadcrumb_last"
-										aria-current="page">Акции </span></span></span></span></p>
+					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+						}
+					?> 
 						<a href="#" class="main-page__bascet d-flex">
 							<p class="main-page__bascet-link">Корзина</p>
 							<span class="main-page__bascet-number">1</span>
@@ -85,5 +88,7 @@ get_header(); ?>
 
 				</section>
 
-			</div>
-		</main>
+		</div>
+	</main>
+
+<?php get_footer();

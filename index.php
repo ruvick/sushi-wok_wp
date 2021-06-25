@@ -19,32 +19,32 @@
 
 					<div class="main-page__promo d-flex">
 
-						<div class="main-page__promo-item main-page__promo-item_1">
+						<a href="<?php echo get_permalink(74);?>" class="main-page__promo-item main-page__promo-item_1">
 							<h3>
 								При покупке <br>
 								от 800 рублей <br>
 								Вы получаете <br>
 								РОЛЫ В ПОДАРОК
 							</h3>
-						</div>
+						</a>
 
-						<div class="main-page__promo-item main-page__promo-item_2">
+						<a href="<?php echo get_permalink(74);?>" class="main-page__promo-item main-page__promo-item_2">
 							<h3>
 								У Вас сегодня <br>
 								День Рождения? <br>
 								Мы дарим скидку <br>
 							</h3>
 							<p>15% на все!</p>
-						</div>
+						</a>
 
-						<div class="main-page__promo-item main-page__promo-item_3">
+						<a href="<?php echo get_permalink(74);?>" class="main-page__promo-item main-page__promo-item_3">
 							<h3>
 								При покупке <br>
 								от 1000 рублей <br>
 								Вы получаете <br>
 								ПИЦУ В ПОДАРОК
 							</h3>
-						</div>
+						</a>
 
 					</div>
 
