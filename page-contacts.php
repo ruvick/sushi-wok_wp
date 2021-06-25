@@ -41,6 +41,7 @@ get_header(); ?>
       <li>БИК: <? echo carbon_get_theme_option("as_bik"); ?></li>
 			<li>Email: <a href="mailto:<? echo $mail = carbon_get_theme_option("as_email"); ?>"><? echo $mail; ?></a></li>
 			<li>Тел: <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a></li>
+			<li>Тел.доп: <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phone_2"); ?></a></li>
 		</ul>
 
 		<div class="block__map" id="map"></div>
