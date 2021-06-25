@@ -7,8 +7,8 @@
 				<a href="#" class="header__logo logo-icon"></a>
 
 				<div class="logo-block__contact d-flex">
-					<a href="tel:+79999999999">+7 999 999 99 99</a>
-					<p>Пн- Вс: 8:00 -23:00</p>
+					<a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phones_1"); ?></a>
+					<p><?php echo carbon_get_theme_option('as_schedule') ?></p>
 				</div>
 			</div>
 
