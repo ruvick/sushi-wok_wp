@@ -1050,7 +1050,7 @@ body.ie .ibg img {
 .mob-menu {
   position: fixed;
   z-index: 50000;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   top: 0;
   width: 50%;
   height: 100%;
