@@ -90,7 +90,7 @@ get_header(); ?>
   								data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
   								data-name = "<? echo  get_the_title();?>"
   								data-count = "1"
-  								data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>">
+  								data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>"> 
 									В корзину
 								</button>
 							</div>
