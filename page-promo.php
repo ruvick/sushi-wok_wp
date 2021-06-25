@@ -28,7 +28,7 @@ get_header(); ?>
 						</a>
 					</div>
 
-					<h1>Акции</h1>
+					<h1><? the_title();?></h1> 
 
 					<div class="promo-block main-page__promo d-flex">
 
