@@ -15,9 +15,9 @@
 			<div class="header__nav-block">
 
 				<div class="header__search search">
-					<form role="search" method="get" id="searchform" class="search" action="#">
-						<input type="text" placeholder="Поиск" class="search__input input">
-						<button type="submit" tabindex="2" id="searchsubmit" class="sub-search" value=""></button>
+					<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>">
+						<input type="text" placeholder="Поиск" class="search__input input" value="<?php echo get_search_query() ?>" name="s" id="s">
+						<button type="submit" tabindex="2" id="searchsubmit" class="sub-search" value=""></button> 
 					</form>
 				</div>
 				<button class="mob-search"></button>
