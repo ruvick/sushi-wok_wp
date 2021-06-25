@@ -55,7 +55,7 @@
     </div>
 
     <div class="sidebar__menu-center">
-      <?php wp_nav_menu( array('theme_location' => 'menu_sidebar','menu_class' => 'sidebar__menu-center_center',
+      <?php wp_nav_menu( array('theme_location' => 'menu_footer','menu_class' => 'sidebar__menu-center_center',
 				'container_class' => 'sidebar__menu-center_center','container' => false )); 
 			?> 
     </div> 
