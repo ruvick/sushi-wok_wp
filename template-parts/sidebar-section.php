@@ -55,12 +55,10 @@
     </div>
 
     <div class="sidebar__menu-center">
-      <ul>
-        <li><a href="#">Акции</a></li>
-        <li><a href="#">Оплата и доставка</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </div>
+      <?php wp_nav_menu( array('theme_location' => 'menu_sidebar','menu_class' => 'sidebar__menu-center_center',
+				'container_class' => 'sidebar__menu-center_center','container' => false )); 
+			?> 
+    </div> 
 
     <div class="sidebar__social d-flex">
       <a href="#" class="sidebar__social-icon social__icon-1"></a>

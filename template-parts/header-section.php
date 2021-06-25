@@ -24,12 +24,9 @@
 
 				<div class="header__menu menu">
 					<nav class="menu__body">
-						<ul class="menu__list d-flex">
-							<li><a href="#" class="menu__link menu__link-promo">Акции</a></li>
-							<li><a href="#" class="menu__link">О нас</a></li>
-							<li><a href="#" class="menu__link">Оплата и доставка</a></li>
-							<li><a href="#" class="menu__link">Контакты</a></li>
-						</ul>
+						<?php wp_nav_menu( array('theme_location' => 'menu_header','menu_class' => 'menu__list',
+							'container_class' => 'menu__list','container' => false )); 
+						?> 
 					</nav>
 					<nav class="mob-menu">
 						<div class="sidebar__menu-top">
@@ -84,12 +81,9 @@
 								</ul>
 							</ul>
 						</div>
-						<ul class="mob-menu__list">
-							<li><a href="#" class="menu__link">Акции</a></li>
-							<li><a href="#" class="menu__link">О нас</a></li>
-							<li><a href="#" class="menu__link">Оплата и доставка</a></li>
-							<li><a href="#" class="menu__link">Контакты</a></li>
-						</ul>
+						<?php wp_nav_menu( array('theme_location' => 'menu_header','menu_class' => 'mob-menu__list',
+							'container_class' => 'mob-menu__list','container' => false )); 
+						?> 
 					</nav>
 				</div>
 

@@ -951,6 +951,9 @@ body.ie .ibg img {
     -ms-flex-pack: end;
     justify-content: flex-end; }
   .menu__list {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .menu__list li {
