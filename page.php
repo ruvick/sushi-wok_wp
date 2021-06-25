@@ -9,17 +9,7 @@
 
 				<section class="main-page category content">
 
-				<div class="main-page__flex-block d-flex">
-					<?php
-						if ( function_exists('yoast_breadcrumb') ) {
-							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-						}
-					?> 
-						<a href="#" class="main-page__bascet d-flex">
-							<p class="main-page__bascet-link">Корзина</p>
-							<span class="main-page__bascet-number bascet_counter">0</span>
-						</a>
-					</div>
+				<?php get_template_part('template-parts/breadcrumb-bascet');?>
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<h1><?php the_title();?></h1>

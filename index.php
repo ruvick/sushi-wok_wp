@@ -11,7 +11,7 @@
 
 					<div class="main-page__flex-block d-flex">
 						<h1><? echo carbon_get_theme_option("about_home_title"); ?></h1> 
-						<a href="#" class="main-page__bascet d-flex">
+						<a href="<?php echo get_permalink(79);?>" class="main-page__bascet d-flex">
 							<p class="main-page__bascet-link">Корзина</p>
 							<span class="main-page__bascet-number bascet_counter">0</span>
 						</a>

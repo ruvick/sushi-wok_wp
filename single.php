@@ -11,11 +11,8 @@ get_header(); ?>
 
 				<section class="main-page category">
 
-				<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			}
-			?> 
+				<?php get_template_part('template-parts/breadcrumb-bascet');?>
+				 
 				<div class="text_blk">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<h1><?php the_title();?></h1>

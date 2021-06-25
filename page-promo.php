@@ -16,17 +16,7 @@ get_header(); ?>
 
   <section class="main-page category">
 
-					<div class="main-page__flex-block d-flex">
-					<?php
-						if ( function_exists('yoast_breadcrumb') ) {
-							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-						}
-					?> 
-						<a href="#" class="main-page__bascet d-flex">
-							<p class="main-page__bascet-link">Корзина</p>
-							<span class="main-page__bascet-number bascet_counter">0</span>
-						</a>
-					</div>
+	<?php get_template_part('template-parts/breadcrumb-bascet');?>
 
 					<h1><? the_title();?></h1> 
 
