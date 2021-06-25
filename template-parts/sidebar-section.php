@@ -61,10 +61,10 @@
     </div> 
 
     <div class="sidebar__social d-flex">
-      <a href="#" class="sidebar__social-icon social__icon-1"></a>
-      <a href="#" class="sidebar__social-icon social__icon-2"></a>
-      <a href="#" class="sidebar__social-icon social__icon-3"></a>
-      <a href="#" class="sidebar__social-icon social__icon-4"></a>
+      <a href="<? echo carbon_get_theme_option("as_insta"); ?>" class="sidebar__social-icon social__icon-1"></a>
+      <a href="<? echo carbon_get_theme_option("as_vk"); ?>" class="sidebar__social-icon social__icon-2"></a>
+      <a href="<? echo carbon_get_theme_option("as_telegr"); ?>" class="sidebar__social-icon social__icon-3"></a> 
+      <a href="<? echo carbon_get_theme_option("as_whatsapp"); ?>" class="sidebar__social-icon social__icon-4"></a>
     </div>
   </div>
 </section>

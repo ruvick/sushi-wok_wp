@@ -66,6 +66,8 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
           ->set_width(50),
         Field::make( 'text', 'as_telegr', __( 'telegram' ) )
           ->set_width(50),
+        Field::make( 'text', 'as_whatsapp', __( 'whatsapp' ) )
+          ->set_width(50),
         Field::make('text', 'map_point', 'Координаты карты')
           ->set_width(50),
         Field::make('text', 'text_map', 'Текст метки карты')
