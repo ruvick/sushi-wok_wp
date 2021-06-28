@@ -2409,8 +2409,11 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .mob-menu.active .sidebar__menu-open li:before {
     display: none; } 
   .main-page__prod-charect {
-    flex: 0 1 45%;
-  }
+    flex: 0 1 45%; }
+  .mob-menu.active .sidebar__submenu.active {
+    padding: 0 15px; }
+  .mob-menu.active .sidebar__submenu.active li {
+    border: 0; }
 }
 
 @media (max-width: 700px) {
