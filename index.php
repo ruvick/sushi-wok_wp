@@ -19,34 +19,24 @@
 
 					<div class="main-page__promo d-flex">
 
-						<a href="<?php echo get_permalink(74);?>" class="main-page__promo-item main-page__promo-item_1">
-							<h3>
-								При покупке <br>
-								от 800 рублей <br>
-								Вы получаете <br>
-								<br>
-								РОЛЫ В ПОДАРОК
-							</h3>
+					<?	$picts = carbon_get_theme_option('complex_promo');
+								if($picts) {
+							$pictsIndex = 0;
+								foreach($picts as $items) {
+					?>
+
+						<a href="<? echo $items['link_promo']; ?>" class="main-page__promo-item main-page__promo-item_2"  style="background-image: url(<?php echo wp_get_attachment_image_src($items['img_promo'], 'full')[0];?>);"> 
+							<h3><? echo $items['text_promo']; ?></h3>
+							<? if ( !empty($items['sticker_promo'])) { ?>
+								<p><? echo $items['sticker_promo']; ?></p>
+							<? } ?>
 						</a>
 
-						<a href="<?php echo get_permalink(74);?>" class="main-page__promo-item main-page__promo-item_2">
-							<h3>
-								У Вас сегодня <br>
-								День Рождения? <br>
-								Мы дарим скидку <br>
-							</h3>
-							<p>15% на все!</p>
-						</a>
-
-						<a href="<?php echo get_permalink(74);?>" class="main-page__promo-item main-page__promo-item_3">
-							<h3>
-								При покупке <br>
-								от 1000 рублей <br>
-								Вы получаете <br>
-								<br>
-								ПИЦУ В ПОДАРОК
-							</h3>
-						</a>
+					<?
+							$pictIndex++; 
+	  					}
+  					}
+					?>
 
 					</div>
 
