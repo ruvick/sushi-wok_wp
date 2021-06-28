@@ -1315,6 +1315,9 @@ body.ie .ibg img {
     display: block;
     padding: 10px 0;
   }
+  .sidebar__submenu.active li a:hover {
+    color: #91B508;
+  }
     .sidebar__submenu.active li:last-child {
       margin-bottom: 0; }
     .sidebar__submenu.active li:after {
