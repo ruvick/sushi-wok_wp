@@ -82,7 +82,7 @@ get_header(); ?>
 									<input id="pageNumeric" class="quantity" type="text" max="99999" value="1">
 									<button class="minus">-</button>
 								</div>
-								<button class="charect-block__btn btn" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
+								<button class="charect-block__btn btn" id = "btn__to-card" onclick = "add_tocart(this, document.getElementById('pageNumeric').value); return false;"
 									data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
 									data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
 									data-size = ""
