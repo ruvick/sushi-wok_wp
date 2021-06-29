@@ -103,7 +103,7 @@ get_header(); ?>
 
 					<?
 							$args = array(
-							'posts_per_page' => 8,
+							'posts_per_page' => 4,
 							'post_type' => 'ultra',
 							'tax_query' => array(
 								array(
