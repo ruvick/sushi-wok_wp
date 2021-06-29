@@ -9,7 +9,10 @@
 	<div class="prod-card__content">
 		<div class="prod-card__text">
 			<h4><? the_title();?></h4>
-			<span><?echo carbon_get_post_meta(get_the_ID(),"offer_weight"); ?> г.</span>
+			<? $weight = carbon_get_post_meta(get_the_ID(),"offer_weight");
+    	if (!empty($weight)) {?>
+				<span><?echo carbon_get_post_meta(get_the_ID(),"offer_weight"); ?> г.</span>
+				<?}?>
 			<p><?echo carbon_get_post_meta(get_the_ID(),"offer_smile_descr"); ?></p>
 		</div>
 		<div class="prod-card__btn-block d-flex">

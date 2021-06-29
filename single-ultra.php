@@ -46,7 +46,16 @@ get_header(); ?>
 							<h1><? the_title();?></h1>
 
 							<div class="charect-block">
-								<p><?echo carbon_get_post_meta(get_the_ID(),"offer_number"); ?> шт / <?echo carbon_get_post_meta(get_the_ID(),"offer_weight"); ?> г</p>
+							<p>
+								<? $number = carbon_get_post_meta(get_the_ID(),"offer_number");
+    							if (!empty($number)) {?>
+										<?echo carbon_get_post_meta(get_the_ID(),"offer_number"); ?> шт /
+								<?}?>
+								<? $weight = carbon_get_post_meta(get_the_ID(),"offer_weight");
+									if (!empty($weight)) {?>
+								 	<?echo carbon_get_post_meta(get_the_ID(),"offer_weight"); ?> г
+								 <?}?>
+								 </p>
 								<p><?echo carbon_get_post_meta(get_the_ID(),"prod_descrip"); ?></p>
 								
 								<? $calor = carbon_get_post_meta(get_the_ID(),"offer_calories");	
