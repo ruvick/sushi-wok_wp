@@ -78,15 +78,15 @@ get_header(); ?>
 							<div class="charect-block__choose d-flex">
 								<div class="charect-block__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></div>
 								<div class="number d-flex">
-									<span class="plus">+</span>
-									<input type="text" value="1" size="5" />
-									<span class="minus">-</span>
+									<button class="plus">+</button>
+									<input id="pageNumeric" class="quantity" type="text" max="99999" value="1">
+									<button class="minus">-</button>
 								</div>
 								<button class="charect-block__btn btn" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
 									data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
 									data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
 									data-size = ""
-  								data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"  
+  								data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"   
   								data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
   								data-name = "<? echo  get_the_title();?>"
   								data-count = "1"

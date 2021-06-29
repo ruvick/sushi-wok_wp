@@ -355,6 +355,11 @@ textarea.input {
   min-width: 35px;
   height: 35px; }
 
+  .number .plus,
+  .number .minus {
+  background: #fff;
+  }
+
 .check {
   position: relative;
   padding-left: 25px;
@@ -1747,6 +1752,7 @@ body.ie .ibg img {
   max-width: 120px;
   width: 100%;
   margin-right: 20px; 
+  overflow: hidden;
   border-radius: 8px;
   border: 1px solid #BABABA; }
 
