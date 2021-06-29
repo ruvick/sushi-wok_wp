@@ -1426,7 +1426,7 @@ body.ie .ibg img {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 77.3%;
   flex: 0 1 77.3%;
-  padding-bottom: 130px;
+  padding-bottom: 200px;
   overflow-y: auto;
   overflow-x: hidden; }
 
@@ -1561,7 +1561,7 @@ body.ie .ibg img {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 57px; }
+  margin-bottom: 35px; }
 
 .prod-card__body {
   -webkit-box-flex: 0;
@@ -1818,8 +1818,73 @@ body.ie .ibg img {
   background: green;
   border-radius: 50%; }
 
-
-
+  .pagination {
+    display: flex;
+    /* margin-left: 37px; */
+}
+  .pagination, .pagination__nav-links {
+    max-width: 232px;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 21px;
+}
+.current {
+  color: #65b965;
+}
+.page-numbers, .pagination__numbers {
+  margin-right: 20px;
+  font-size: 18px;
+  font-family: Lato;
+}
+.pagination .next, .pagination__next {
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 13px;
+  position: relative;
+}
+.pagination .prev, .pagination__back {
+  width: 8px;
+  height: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 37px;
+  position: relative;
+}
+.pagination .next:after, .pagination__next:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 12px;
+  background: url('img/icons/arrow-next.svg');
+  background-repeat: no-repeat;
+}
+.pagination .prev:before, .pagination__back:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 12px;
+  background: url('img/icons/arrow-back.svg');
+  background-repeat: no-repeat;
+}
 
 /* Оформление корзины */
 
