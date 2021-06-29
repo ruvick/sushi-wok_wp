@@ -1,7 +1,7 @@
 <?php
 
-define("COMPANY_NAME", "АВТОМОБИЛЬНЫЕ СИДЕНЬЯ");
-define("MAIL_RESEND", "noreply@ultrakresla.ru");
+define("COMPANY_NAME", "Пица, Роллы, Вок");
+define("MAIL_RESEND", "noreply@dostavka-eisk.ru");
 
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
@@ -199,7 +199,7 @@ function create_taxonomies(){
 			'new_item_name'     => __( 'Имя новой категории товара' ),
 			'menu_name'         => __( 'Категории товара' ),
 		),
-		'description' => "Категория товаров для магазина",
+		'description' => "Категория товаров для магазина", 
 		'public' => true,
 		'show_ui'       => true,
 		'query_var'     => true,
@@ -395,7 +395,7 @@ function send_cart() {
 		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 		
 		$adr_to_send = carbon_get_theme_option("as_email_send");
-		$adr_to_send = (empty($adr_to_send))?"asmi046@gmail.com,rudikov-web@ya.ru":$adr_to_send;
+		// $adr_to_send = (empty($adr_to_send))?"asmi046@gmail.com,rudikov-web@ya.ru":$adr_to_send;
 		
 		$zak_number = "A".date("H").date("i").date("s").rand(100,999);
 
@@ -491,7 +491,7 @@ function send_cart() {
 		$mail_content .= "<strong>Комментарий:</strong> ".$_REQUEST["comment"]."<br/>";
 		// $mail_content .= "<strong>FTP:</strong> ".($ftprez)?"Загружен":"Не загружен"."<br/>";
 
-		$mail_them = "Заказ на сайте AgriBest";
+		$mail_them = "Заказ с сайта";
 
 
 		
