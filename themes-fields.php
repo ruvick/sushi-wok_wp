@@ -85,20 +85,10 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       Field::make('text', 'offer_weight', 'Вес')->set_width(50),
       // Field::make('text', 'offer_allsearch', 'Все артикулы для поиска')->set_width(50),
       // Field::make('text', 'offer_siries', 'Серия (для сопутствующих)')->set_width(30),
-
-      // Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
       Field::make('text', 'offer_sticker', 'Стикер')->set_width(50), 
-        // Field::make('select', 'rev_reiting', 'Оценка' )->add_options( array(
-        //   '0' => '0',
-        //   '1' => '1',
-        //   '2' => '2',
-        //   '3' => '3',
-        //   '4' => '4',
-        //   '5' => '5'
-        // ) )->set_width(20),
-
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       Field::make('text', 'offer_number', 'Колличество')->set_width(50),
+      Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
       // Field::make('text', 'offer_benefit', 'Выгода')->set_width(50),
       Field::make('rich_text', 'prod_descrip', 'Описание товара')->set_width(100),
       Field::make('text', 'offer_calories', 'Калории')->set_width(50),
