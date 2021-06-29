@@ -1756,6 +1756,16 @@ body.ie .ibg img {
   font-weight: 900;
   margin-right: 45px; }
 
+.charect-block__price span {
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.prod-card__price span {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
 .charect-block__choose .number {
   max-width: 120px;
   width: 100%;
