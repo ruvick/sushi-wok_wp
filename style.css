@@ -447,12 +447,13 @@ textarea.input {
   line-height: 13px;
   vertical-align: middle; }
 
-.quantity {
+/* .quantity {
   position: relative;
   width: 73px;
   height: 47px;
   border: 1px solid #cfcfcf;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+ } */
 
 .quantity__input {
   height: 45px;
