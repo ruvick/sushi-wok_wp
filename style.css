@@ -1823,12 +1823,13 @@ body.ie .ibg img {
     margin-left: 15px;
 }
   .pagination, .pagination__nav-links {
-    max-width: 232px;
+    /* max-width: 232px; */
     width: 100%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     min-height: 21px;
+    flex-wrap: wrap;
 }
 .current {
   color: #65b965;
@@ -1837,6 +1838,7 @@ body.ie .ibg img {
   margin-right: 20px;
   font-size: 18px;
   font-family: Lato;
+  margin-bottom: 15px;
 }
 .pagination .next, .pagination__next {
   height: 16px;
