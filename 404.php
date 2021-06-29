@@ -1,17 +1,22 @@
-
-<?php get_header(); ?>
+<?php get_header(); ?> 
 
 <?php get_template_part('template-parts/header-section');?>
 
-	<main id="primary" class="page site-main">
+		<main class="page">
+			<div class="container">
 
-	<div class = "content contentInPage centrElem">	 
-		<div class="container">
-			<h1 class = "h404">404</h1>
-				Запрашиваемая страница не была найдена
-		</div>
-	</div>
+      <?php get_template_part('template-parts/sidebar-section');?>
 
-	</main>
+				<section class="main-page category content">
 
-<?php get_footer(); ?>
+				<?php get_template_part('template-parts/breadcrumb-bascet');?>
+
+					<div class = "contentInPage centrElem">	 
+							<h1 class = "h404">404 Запрашиваемая страница не была найдена</h1>
+					</div>
+
+				</section>
+			</div>
+		</main>
+
+<?php get_footer(); 
