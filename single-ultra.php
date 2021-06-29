@@ -85,7 +85,7 @@ get_header(); ?>
 							</div>
 
 							<div class="charect-block__choose d-flex">
-								<div class="charect-block__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></div>
+								<div class="charect-block__price"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> <span>₽</span></div>
 								<div class="number d-flex">
 									<button class="plus">+</button>
 									<input id="pageNumeric" class="quantity" type="text" max="99999" value="1">

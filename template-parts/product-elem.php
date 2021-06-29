@@ -16,7 +16,7 @@
 			<p><?echo carbon_get_post_meta(get_the_ID(),"offer_smile_descr"); ?></p>
 		</div>
 		<div class="prod-card__btn-block d-flex">
-			<p class="prod-card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?></p>
+			<p class="prod-card__price"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> <span>₽</span></p>
 			<button class="btn" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
   			data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
 				data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
