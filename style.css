@@ -1820,7 +1820,7 @@ body.ie .ibg img {
 
   .pagination {
     display: flex;
-    /* margin-left: 37px; */
+    margin-left: 15px;
 }
   .pagination, .pagination__nav-links {
     max-width: 232px;
