@@ -1651,14 +1651,21 @@ body.ie .ibg img {
   margin-left: auto; }
 
 .main-page__filter {
+  flex-wrap: wrap;
   margin-bottom: 43px; }
 
 .main-page__btn {
   color: #161615;
   background: #E8E8E8;
+  margin-bottom: 10px;
   margin-right: 10px; }
-  .main-page__btn:last-child {
-    margin-right: 0; }
+.main-page__btn:last-child {
+  margin-right: 0; }
+
+.main-page__btn.active {
+  color: #fff;
+  background: #91b508;
+}
 
 .promo-block {
   -ms-flex-wrap: wrap;

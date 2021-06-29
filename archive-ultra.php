@@ -14,6 +14,30 @@
 			<!-- Вывод заголовка -->
 			<h1><?php single_cat_title( '', true );?></h1>
 
+			<div class="main-page__filter d-flex">
+			<?php
+          $terms = get_terms(
+            array(
+              'taxonomy'   => 'ultracat',
+              'child_of' => 6,
+              'hide_empty' => true,
+              'pad_counts'  => true, 
+              'orderby' => 'count',
+              'order' => 'ASC',
+            )
+          );
+  
+          if ( ! empty( $terms ) && is_array( $terms ) ) {
+            foreach ( $terms as $term ) { ?>
+                <a href="<?php echo esc_url( get_term_link( $term ) ) ?>" class="main-page__btn btn">
+                  <?php echo $term->name; ?>
+                </a>
+              <?php
+            }
+          }
+        ?>
+			</div>
+
 			<div class="prod-card d-flex">
 
 				<!-- Вывод записей таксономии -->
